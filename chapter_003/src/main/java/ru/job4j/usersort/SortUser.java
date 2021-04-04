@@ -8,8 +8,6 @@ public class SortUser {
         Set<User> users = new TreeSet<User>(list);
 
         return users;
-
-
     }
 
     public List<User> sortNameLength(List<User> list) {
@@ -19,11 +17,7 @@ public class SortUser {
                 return Integer.compare(user1.getName().length(), user2.getName().length());
             }
         });
-
-
         return list;
-
-
     }
 
     public List<User> sortByAllFields(List<User> list) {
@@ -41,11 +35,8 @@ public class SortUser {
                     String user2age = (o2.getAge());
                     return user1age.compareTo(user2age);
 
-
                 }
             }
-
-
         });
         return list;
     }

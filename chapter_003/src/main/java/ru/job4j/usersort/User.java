@@ -3,8 +3,6 @@ package ru.job4j.usersort;
 import java.util.Objects;
 
 public class User implements Comparable<User> {
-
-
     private String name;
     private String age;
 
