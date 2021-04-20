@@ -20,8 +20,6 @@ public class ValidateInput extends ConsoleInput {
         boolean invalid = true;
         int value = -1;
         do {
-
-
             try {
                 value = super.ask(question, range);
 
@@ -31,12 +29,8 @@ public class ValidateInput extends ConsoleInput {
                 System.out.println("Пожалуйста введите ключ из меню");
             } catch (NumberFormatException nfe) {
                 System.out.println("Пожалуйста, введите корректные данные снова");
-
             }
         } while (invalid);
         return value;
-
-
     }
-
 }
