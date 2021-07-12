@@ -7,14 +7,14 @@ import static org.junit.Assert.assertThat;
 
 public class WeightTest {
     @Test
-    public void manWeight() {
+    public void whenMan180Then92() {
         Weight fit = new Weight();
         double weight = fit.manWeight(180);
         assertThat(weight, closeTo(92.0, 0.1));
     }
 
     @Test
-    public void womanWeight() {
+    public void whenWoman170Then69() {
         Weight fit = new Weight();
         double weight = fit.womanWeight(170);
         assertThat(weight, closeTo(69.0, 0.1));
