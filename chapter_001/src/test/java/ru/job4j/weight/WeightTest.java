@@ -1,5 +1,6 @@
 package ru.job4j.weight;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.number.IsCloseTo.closeTo;
@@ -9,15 +10,19 @@ public class WeightTest {
     @Test
     public void whenMan180Then92() {
         Weight fit = new Weight();
-        double weight = fit.manWeight(180);
-        assertThat(weight, closeTo(92.0, 0.1));
+        short in = 180;
+        double expected = 92;
+        double out = fit.manWeight(in);
+        Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void whenWoman170Then69() {
         Weight fit = new Weight();
-        double weight = fit.womanWeight(170);
-        assertThat(weight, closeTo(69.0, 0.1));
+        short in = 170;
+        double expected = 69;
+        double out = fit.womanWeight(in);
+        Assert.assertEquals(expected, out, 0.01);
     }
 }
 
