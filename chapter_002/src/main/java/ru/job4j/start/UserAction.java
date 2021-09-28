@@ -22,6 +22,4 @@ public interface UserAction {
      * @ Строка меню
      */
     String info();
-
-
 }
