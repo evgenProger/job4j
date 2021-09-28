@@ -8,12 +8,9 @@ import java.util.*;
 
 public class Tracker {
 
-
-
     private List<Item> items = new ArrayList<>();
     private int position = 0;
     private static final Random RN = new Random();
-
 
     /**
      * Метод добавляет заявку, переданную в аргументах в массив заявок items. В методе генерируется уникадьный
@@ -48,12 +45,8 @@ public class Tracker {
                 result = true;
                 break;
             }
-
-
         }
         return result;
-
-
     }
 
     /**
@@ -104,8 +97,6 @@ public class Tracker {
         for (Item item : items) {
             if (item.getName().contains(key)) {
                 resultitems.add(item);
-
-
             }
         }
         return resultitems;
@@ -135,6 +126,4 @@ public class Tracker {
         }
         return result;
     }
-
-
 }

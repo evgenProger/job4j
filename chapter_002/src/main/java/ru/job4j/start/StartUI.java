@@ -16,7 +16,6 @@ public class StartUI {
 
     private boolean working = true;
 
-
     /**
      * Получение данных от пользователя
      */
@@ -29,7 +28,6 @@ public class StartUI {
 
     private Tracker tracker;
 
-
     /**
      * Конструктор инициализирующий поля
      *
@@ -40,7 +38,6 @@ public class StartUI {
     public StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
-
     }
 
     /**
@@ -64,7 +61,6 @@ public class StartUI {
 
     }
 
-
     public void stop() {
         this.working = false;
     }
@@ -74,13 +70,12 @@ public class StartUI {
      *
      * @param args
      */
+
     public static void main(String[] args) {
         new StartUI(
                 new ValidateInput(
                         new ConsoleInput()
                 ), new Tracker()
         ).init();
-
-
     }
 }

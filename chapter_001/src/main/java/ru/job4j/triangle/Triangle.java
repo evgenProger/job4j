@@ -1,17 +1,10 @@
 package ru.job4j.triangle;
 
-
 import ru.job4j.condition.Point;
-
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class Triangle {
-
-
-
-
-
     /**
      * Метод вычисления периметра трепугольника по длинам сторон
      * <p>
@@ -29,8 +22,6 @@ public class Triangle {
         double p = (a + b + c) / 2;
         return p;
     }
-
-
     /**
      * Метод должен вычислить площадь треугольника
      * <p>
@@ -46,16 +37,14 @@ public class Triangle {
         double a = new Point().distance(x1, y1, x2, y2);
         double b = new Point().distance(x2, y2, x3, y3);
         double c = new Point().distance(x1, y1, x3, y3);
-        double p = this.period(a, b, c);
         if (this.exist(a, b, c)) {
+            double p = this.period(a, b, c);
             rs = Math.sqrt(p * (p - a) * (p - b) * (p - c));
         }
         return rs;
     }
-
     /**
      * Метод проверяет существование треугольника
-     *
      * @param ab Расстояние от точки а до точки b
      * @param ac Расстояние от точки до точки c
      * @param bc Расстояние от точки b до точки c
@@ -63,8 +52,7 @@ public class Triangle {
      */
 
     private boolean exist(double ab, double ac, double bc) {
-        return ((ab + bc) > ac) && ((bc + ac) > ab) && ((ac + ab) > bc);
-
+        return ab + bc > ac && bc + ac > ab && ac + ab > bc;
     }
 }
 

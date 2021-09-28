@@ -18,7 +18,4 @@ public class TrackerSingletonTwo {
         }
         return instance;
     }
-
-
-
 }

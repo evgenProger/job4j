@@ -33,7 +33,6 @@ public class ConsoleInput implements Input {
         if (!exist) {
             throw new MenuOutException("Выход за пределы пунктов меню");
         }
-
         return key;
     }
 }
