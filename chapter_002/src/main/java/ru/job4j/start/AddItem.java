@@ -21,7 +21,5 @@ public class AddItem extends BaseAction {
         System.out.println("------Новая заявка с именем:" + item.getName());
         System.out.println("------Новая заявка с описанием:" + item.getDescription());
 
-
     }
-
 }

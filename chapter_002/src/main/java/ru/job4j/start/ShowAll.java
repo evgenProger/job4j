@@ -18,7 +18,5 @@ public class ShowAll extends BaseAction {
         for (Item item : items) {
             System.out.println(item);
         }
-
     }
-
 }

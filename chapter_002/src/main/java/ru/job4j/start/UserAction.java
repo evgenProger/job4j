@@ -3,7 +3,6 @@ package ru.job4j.start;
 public interface UserAction {
     /**
      * Метод возвращает ключ опции
-     *
      * @return ключ
      */
     int key();
