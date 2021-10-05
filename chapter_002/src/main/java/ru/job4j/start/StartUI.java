@@ -50,15 +50,12 @@ public class StartUI {
         menu.fillActions(this);
         for (int i = 0; i < menu.getActionsLentgh(); i++) {
             range.add(i);
-
         }
         do {
             menu.show();
             menu.select(input.ask("select:", range));
         }
         while (this.working);
-
-
     }
 
     public void stop() {

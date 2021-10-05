@@ -1,5 +1,6 @@
 package ru.job4j.builder;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -23,14 +24,13 @@ public class Job4JStream {
     }
 
     public  List<String> collect(List<String> list) {
-        for (String str : source) {
+        List<String> values = new ArrayList<>();
+        for (String str : list) {
             if (filter.test(str)) {
-                list.add(str);
-
+                values.add(str);
             }
-
         }
-        return list;
+        return values;
     }
 
 
@@ -64,10 +64,5 @@ public class Job4JStream {
         public Builder self() {
             return this;
         }
-
     }
-
-
-
-
 }

@@ -16,8 +16,7 @@ public class Exit extends BaseAction {
         System.out.println();
     }
 
-
-    }
+}
 
 
 
