@@ -15,12 +15,12 @@ public class ArrayMerge {
         int[] result = new int[left.length + right.length];
         for (int k = 0; k < result.length; k++) {
 
-            if (i > left.length - 1) {  // если кончился первый массив, добаляем оставшиеся значения из второго массива
+            if (i > left.length - 1) {
                 result[k] = right[j];
                 j++;
 
 
-            } else if (j > right.length - 1) {  // если кончился второй массив, добавляем оставшиеся значения из первого массива
+            } else if (j > right.length - 1) {  
                 result[k] = left[i];
                 i++;
 

@@ -14,6 +14,7 @@ public class ArrayChar {
 
     /**
      * Проверяет что слово начинается с префикса.
+     *
      * @param prefix префикс.
      * @return если слово начинается с префикса
      */
@@ -21,16 +22,13 @@ public class ArrayChar {
     public boolean startWith(String prefix) {
         boolean result = true;
         char[] value = prefix.toCharArray();
-        // проверить что массив date имеет первые элементы, одинаковые с value
         for (int index = 0; index < value.length; index++) {
             if (date[index] != value[index]) {
                 result = false;
                 break;
             }
-
         }
         return result;
-
     }
 
 
