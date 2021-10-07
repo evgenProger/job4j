@@ -18,8 +18,8 @@ import org.junit.Before;
  */
 
 public class PaintTest {
-    private final PrintStream stdout = System.out;  // поле содержит дефолтный вывод в консоль
-    private final ByteArrayOutputStream out = new ByteArrayOutputStream();  // буфер для результата
+    private final PrintStream stdout = System.out;
+    private final ByteArrayOutputStream out = new ByteArrayOutputStream();
     @Before
     public void loadOutput() {
         System.setOut(new PrintStream(this.out));
@@ -30,8 +30,7 @@ public class PaintTest {
     }
     @Test
     public void whenDrawSquare() {
-        new Paint().draw(new Square()); // выполняем действия пишущие в консоль
-        // проверяем результат вычисления
+        new Paint().draw(new Square());
         assertThat(
                 new String(out.toByteArray()),
                 is(
@@ -48,8 +47,7 @@ public class PaintTest {
     @Test
     public void whenTriangle() {
 
-        new Paint().draw(new Triangle());  // выполняем действия пишущие в консоль
-        // проверяем результат вычисления
+        new Paint().draw(new Triangle());
         assertThat(
                 new String(out.toByteArray()),
                 is(
@@ -60,7 +58,5 @@ public class PaintTest {
                         .toString()
                 )
         );
-
     }
-
 }

@@ -18,9 +18,6 @@ public class StartUITest {
     private final Tracker tracker = new Tracker();
     private final PrintStream stdout = System.out;
     private final ByteArrayOutputStream out = new ByteArrayOutputStream();
-    /**
-     * Перенос строки
-     */
     private final String ln = System.lineSeparator();
     private final String menu = this.showMenu();
 
@@ -64,35 +61,32 @@ public class StartUITest {
         showalls.append(menu).append(ln);
 
         assertThat(new String(out.toByteArray()), is(showalls.toString()));
-
-
     }
 
 
     @Test
     public void whenUserAddItemThenTrackerHasNewItemWithSomeName() {
-        Input input = new StubInput(new String[]{"0", "testname", "testdesc", "6"}); // создаем Stubinput с последовательностью действий
-        new StartUI(input, this.tracker).init(); // создаем startUI и вызываем метод init
+        Input input = new StubInput(new String[]{"0", "testname", "testdesc", "6"});
+        new StartUI(input, this.tracker).init();
         assertThat(tracker.getAll().get(0).getName(), is("testname"));
-
 
     }
 
     @Test
     public void whenUpdateYhenTrackerHasUpdateValue() {
-        Item item = tracker.add(new Item("testname", "testdescription")); // напрямую добавляем заявку
-        Input input = new StubInput(new String[]{"1", item.getId(), "testreplace", "replaceitem", "6"}); //создаем staubInput с последовательностью действий (производим замену заявки)
-        new StartUI(input, tracker).init(); // создаем  startUI и вызываем метод init
+        Item item = tracker.add(new Item("testname", "testdescription"));
+        Input input = new StubInput(new String[]{"1", item.getId(), "testreplace", "replaceitem", "6"});
+        new StartUI(input, tracker).init();
         assertThat(tracker.findById(item.getId()).getName(), is("testreplace"));
 
     }
 
     @Test
     public void whenDeleteItemThenTrackerHasUpdateValue() {
-        Item one = tracker.add(new Item("testname1", "testdescription1")); // напряму добавляем первую заявку
-        Item two = tracker.add(new Item("testname2", "testdescription2")); // добавляем вторую заявку
-        Input input = new StubInput(new String[]{"3", one.getId(), "6"});  // создаем stubInput c последовательностью дейсвий (производим удление заявки)
-        new StartUI(input, tracker).init();  //создаем startUI и вызываем метод init
+        Item one = tracker.add(new Item("testname1", "testdescription1"));
+        Item two = tracker.add(new Item("testname2", "testdescription2"));
+        Input input = new StubInput(new String[]{"3", one.getId(), "6"});
+        new StartUI(input, tracker).init();
         List<Item> result = tracker.findAll();
         assertThat(result.get(0).getName(), is("testname2"));
 
@@ -100,18 +94,16 @@ public class StartUITest {
 
     @Test
     public void whenFindItemByIdThenWeHaveFoundItem() {
-        Item one = tracker.add(new Item("testname1", "testdescription1")); // напрямую добавляем первую заявку
-        Item two = tracker.add(new Item("testname2", "testdescription2")); // добавляем вторую заявку
-        Input input = new StubInput(new String[]{"4", two.getId(), "6"}); // создаем stubInput с последовательностью действий (производим поиск заявки по id)
-        new StartUI(input, tracker).init(); // создаем startUI и вызываем метод init
+        Item one = tracker.add(new Item("testname1", "testdescription1"));
+        Item two = tracker.add(new Item("testname2", "testdescription2"));
+        Input input = new StubInput(new String[]{"4", two.getId(), "6"});
+        new StartUI(input, tracker).init();
         StringBuilder showitembyid = new StringBuilder(menu);
         showitembyid.append("-----Поиск заявки по id-----").append(ln);
         showitembyid.append("Найденная заявка");
         showitembyid.append(two).append(ln);
         showitembyid.append(menu).append(ln);
         assertThat(new String(out.toByteArray()), is(showitembyid.toString()));
-
-
     }
 
     @Test

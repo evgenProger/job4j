@@ -21,27 +21,17 @@ public class TrackerTest {
         tracker.add(item);
         Item result = tracker.findById(item.getId());
         assertThat(result.getName(), is(item.getName()));
-
-
     }
 
     @Test
     public void whenReplaceNameThenRetornNewName() {
         Tracker tracker = new Tracker();
         Item previous = new Item("test1", "testdescription", 123L);
-        //Добавляем заявку в трекер. Теперь в объект проинициализирован id.
         tracker.add(previous);
-        //Создаем новую заявку
         Item next = new Item("test2", "testDescription2", 1234L);
-        //Проставляем старый id из previous, который был сгенерирован выше
         next.setId(previous.getId());
-        //Обновляем заявку в трекере
         tracker.replace(previous.getId(), next);
-        //Проверяем, что заявка с таким id имеет новое имя test2
         assertThat(tracker.findById(previous.getId()).getName(), is("test2"));
-
-
-
     }
 
     @Test
@@ -57,7 +47,6 @@ public class TrackerTest {
         List<Item> result = tracker.findAll();
         List<Item> expect = Arrays.asList(one, three);
         assertThat(result, is(expect));
-
     }
 
     @Test
@@ -71,9 +60,6 @@ public class TrackerTest {
         List<Item> list = tracker.findAll();
         int result = list.size();
         assertThat(result, is(2));
-
-
-
     }
 
     @Test
@@ -90,10 +76,5 @@ public class TrackerTest {
         List<Item> result = tracker.findByName("test2");
         List<Item> expect = Arrays.asList(one, two, four);
         assertThat(result, is(expect));
-
-
-
     }
-
-
 }
