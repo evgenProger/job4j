@@ -1,7 +1,6 @@
 package ru.job4j.loop;
 
 public class Counter {
-
     /**
      * Метод вычисляет сумму четных числе
      * @param start начальное значение
