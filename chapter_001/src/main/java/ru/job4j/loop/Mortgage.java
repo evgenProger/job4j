@@ -12,9 +12,8 @@ public class Mortgage {
                 break;
             }
             credit = credit * percent + credit;
-           ;
-       }
 
+       }
         return year;
     }
 }
