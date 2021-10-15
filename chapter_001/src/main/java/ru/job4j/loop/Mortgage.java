@@ -4,14 +4,14 @@ public class Mortgage {
     public static int year(double amount, int salary, double percent) {
         int year = 0;
         percent = percent / 100;
-        double credit =  amount + amount * percent;
-        while (credit > 0) {
+        amount =  amount + amount * percent;
+        while (amount > 0) {
             year++;
-            credit = credit - salary;
-            if (credit < 0) {
+            amount = amount - salary;
+            if (amount < 0) {
                 break;
             }
-            credit = credit * percent + credit;
+            amount = amount * percent + amount;
 
        }
         return year;
