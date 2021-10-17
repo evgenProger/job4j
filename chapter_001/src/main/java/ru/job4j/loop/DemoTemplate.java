@@ -6,5 +6,4 @@ public class DemoTemplate {
             System.out.println(i);
         }
     }
-
 }
