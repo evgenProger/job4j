@@ -8,7 +8,6 @@
         <version>2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>chapter_004</artifactId>
 
     <build>
@@ -16,15 +15,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <source>9</source>
-                    <target>9</target>
+                    <source>16</source>
+                    <target>16</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-
-
-
 </project>
