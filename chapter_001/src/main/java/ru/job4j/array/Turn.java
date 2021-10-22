@@ -1,7 +1,6 @@
 package ru.job4j.array;
 
 public class Turn {
-
     /**
      * Метод переворачмвает массив
      * @param array принимает входящий массив
