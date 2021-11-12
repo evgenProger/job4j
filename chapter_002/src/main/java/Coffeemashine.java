@@ -22,8 +22,6 @@ public class Coffeemashine {
 
         }
 
-
         return Arrays.copyOf(result, index);
-
     }
 }
