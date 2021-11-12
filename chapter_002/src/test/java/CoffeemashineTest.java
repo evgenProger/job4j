@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -5,27 +6,39 @@ import static org.hamcrest.core.Is.is;
 
 public class CoffeemashineTest {
     @Test
-    public void whenChanges35() {
-        Coffeemashine coffeemashine = new Coffeemashine();
-        int[] result = coffeemashine.changes(50, 15);
-        int[] expect = new int[] {10, 10, 10, 5};
-        assertThat(result, is(expect));
+    public void whenEquals() {
+        int money = 100;
+        int price = 100;
+        int[] result = Coffeemashine.changes(money, price);
+        int[] expected = {};
+        Assert.assertArrayEquals(expected, result);
     }
 
     @Test
-     public void whenChanges43() {
-        Coffeemashine coffeemashine = new Coffeemashine();
-        int[] result = coffeemashine.changes(63, 20);
-        int[] expect = new int[] {10, 10, 10, 10, 2, 1};
-        assertThat(result, is(expect));
+    public void when50by35() {
+        int money = 50;
+        int price = 35;
+        int[] result = Coffeemashine.changes(money, price);
+        int[] expected = {10, 5};
+        Assert.assertArrayEquals(expected, result);
     }
 
     @Test
-    public void whenChanges6() {
-        Coffeemashine coffeemashine = new Coffeemashine();
-        int[] result = coffeemashine.changes(12, 6);
-        int[] expect = new int[] {5, 1};
-        assertThat(result, is(expect));
+    public void when50by21() {
+        int money = 50;
+        int price = 21;
+        int[] result = Coffeemashine.changes(money, price);
+        int[] expected = {10, 10, 5, 2, 2};
+        Assert.assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void when50by32() {
+        int money = 50;
+        int price = 32;
+        int[] result = Coffeemashine.changes(money, price);
+        int[] expected = {10, 5, 2, 1};
+        Assert.assertArrayEquals(expected, result);
     }
 
 

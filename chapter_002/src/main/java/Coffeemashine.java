@@ -2,9 +2,9 @@ import java.util.Arrays;
 
 public class Coffeemashine {
 
-    private int[] result;
+    private static int[] result;
 
-    public int[] changes(int value, int price) {
+    public static int[] changes(int value, int price) {
         int index = 0;
         int oddmoney = value - price;
         int[] coins = new int[]{1, 2, 5, 10};
