@@ -24,13 +24,3 @@ public class Coffeemashine {
     }
 }
 
- /*while (oddmoney >= i) {
-         result[index] = coins[i];
-         oddmoney = oddmoney - i;
-         index++;
-         }
-         if (oddmoney == 0) {
-         break;
-         }
-
-  */
