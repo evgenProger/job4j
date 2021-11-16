@@ -10,14 +10,11 @@ public class Coffeemashine {
         int oddmoney = money - price;
         int[] coins = new int[]{10, 5, 2, 1};
         result = new int[oddmoney];
-        for (int i : coins) {
-            while (oddmoney >= i) {
-                result[index] = i;
-                oddmoney = oddmoney - i;
+        for (int coin : coins) {
+            while (oddmoney >= coin) {
+                result[index] = coin;
+                oddmoney = oddmoney - coin;
                 index++;
-            }
-            if (oddmoney == 0) {
-                break;
             }
         }
         return Arrays.copyOf(result, index);
