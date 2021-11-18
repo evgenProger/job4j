@@ -3,13 +3,11 @@ import java.util.Collections;
 
 public class Coffeemashine {
 
-    private static int[] result;
-
     public static int[] changes(int money, int price) {
         int index = 0;
         int oddmoney = money - price;
         int[] coins = new int[]{10, 5, 2, 1};
-        result = new int[oddmoney];
+        int[] result = new int[oddmoney];
         for (int coin : coins) {
             while (oddmoney >= coin) {
                 result[index] = coin;
