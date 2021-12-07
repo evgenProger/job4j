@@ -4,9 +4,16 @@ import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 public class Point {
-    public double distance(int x1, int y1, int x2, int y2) {
-        double first = Math.pow(x2 - x1, 2);
-        double second = Math.pow(y2 - y1, 2);
-        return sqrt(first + second);
+
+    private int x;
+    private int y;
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distance(Point that) {
+        return sqrt(Math.pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 }
