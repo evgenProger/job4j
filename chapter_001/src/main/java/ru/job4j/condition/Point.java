@@ -9,7 +9,4 @@ public class Point {
         double second = Math.pow(y2 - y1, 2);
         return sqrt(first + second);
     }
-
-
-
 }
