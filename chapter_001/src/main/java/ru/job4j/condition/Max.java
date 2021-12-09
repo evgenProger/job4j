@@ -15,5 +15,4 @@ public class Max {
                 max(right,
                         max(third, four)));
     }
-
 }

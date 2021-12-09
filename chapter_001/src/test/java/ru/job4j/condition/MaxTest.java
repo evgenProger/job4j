@@ -20,8 +20,4 @@ public class MaxTest {
     public void whenCompareFourNumbers() {
         assertThat(Max.max(2, 25, 5, 12), is(25));
     }
-
-
-
-
 }
