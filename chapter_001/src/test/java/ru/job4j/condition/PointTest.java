@@ -40,5 +40,4 @@ public class PointTest {
         double expected = 25.495;
         Assert.assertEquals(result, expected, 0.1);
     }
-
 }
