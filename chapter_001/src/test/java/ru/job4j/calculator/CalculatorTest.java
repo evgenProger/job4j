@@ -33,4 +33,20 @@ public class CalculatorTest  {
         double expected = 4;
         assertThat(result, is(expected));
     }
+
+    @Test
+    public void whenAddThreeNumbersThenSix() {
+        Calculator calc = new Calculator();
+        double result = calc.add(1, 2, 3);
+        double expected = 6;
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    public void whenAddFourNumbersThenTen() {
+        Calculator calc = new Calculator();
+        double result = calc.add(1, 2, 3, 4);
+        double expected = 10;
+        assertThat(result, is(expected));
+    }
 }
