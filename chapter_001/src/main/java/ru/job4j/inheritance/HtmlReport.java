@@ -8,4 +8,5 @@ public class HtmlReport extends TextReport {
                 + body
                 + "</span>";
     }
+
 }
