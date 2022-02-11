@@ -3,6 +3,8 @@ package ru.job4j.start;
 import ru.job4j.models.Task;
 import ru.job4j.models.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -69,6 +71,9 @@ public class StartUI {
      */
 
     public static void main(String[] args) {
+        Item item = new Item("name", "desc");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
+        System.out.println(item.getCreated().format(formatter));
         new StartUI(
                 new ValidateInput(
                         new ConsoleInput()

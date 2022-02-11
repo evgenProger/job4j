@@ -1,5 +1,6 @@
 package ru.job4j.models;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Item {
@@ -8,6 +9,7 @@ public class Item {
     private String name;
     private String description;
     private long create;
+    private LocalDateTime created = LocalDateTime.now();
 
     public Item() {
     }
@@ -89,6 +91,10 @@ public class Item {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, description, create);
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
     }
 }
 
