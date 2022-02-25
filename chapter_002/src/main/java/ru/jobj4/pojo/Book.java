@@ -19,4 +19,8 @@ public class Book {
                 + pages
                 + '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }
