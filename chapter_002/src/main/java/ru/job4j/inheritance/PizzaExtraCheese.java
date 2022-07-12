@@ -4,6 +4,7 @@ public class PizzaExtraCheese extends Pizza {
 
     @Override
     public String name() {
-        return "Pizza with extra cheese";
+        Pizza pizza = new Pizza();
+        return pizza.name() + " " +  "with extra cheese";
     }
 }
