@@ -1,10 +1,12 @@
 package ru.job4j.models;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public class Item {
 
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
     private String id;
     private String name;
     private String description;
@@ -21,19 +23,7 @@ public class Item {
         this.create = create;
     }
 
-    @Override
-    public String toString() {
-        return "Item{"
-                + "id='"
-                + id
-                + '\''
-                + ", name='" + name
-                + '\''
-                + ", description='"
-                + description + '\''
-                + ", create="
-                + create + '}';
-    }
+
 
     public Item(String name, String description) {
         this.name = name;
@@ -95,6 +85,25 @@ public class Item {
 
     public LocalDateTime getCreated() {
         return created;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id='"
+                + id
+                + '\''
+                + ", name='"
+                + name
+                + '\''
+                + ", description='"
+                + description
+                + '\''
+                + ", create="
+                + create
+                + ", created="
+                + created.format(FORMATTER)
+                + '}';
     }
 }
 
