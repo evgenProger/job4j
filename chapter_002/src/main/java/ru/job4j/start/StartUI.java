@@ -2,6 +2,7 @@ package ru.job4j.start;
 
 import ru.job4j.models.Task;
 import ru.job4j.models.*;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -28,6 +29,13 @@ public class StartUI {
      */
 
     private Tracker tracker;
+
+    /**
+     * Конструктор инициализирующий поля
+     *
+     * @param input   ввод данных
+     * @param tracker хранилище заявок
+     */
 
     public StartUI(Input input, Tracker tracker) {
         this.input = input;
@@ -64,11 +72,7 @@ public class StartUI {
 
     public static void main(String[] args) {
         Item item = new Item("name", "desc");
-        System.out.println(item);
-        new StartUI(
-                new ValidateInput(
-                        new ConsoleInput()
-                ), new Tracker()
-        ).init();
+        System.out.println(item.getCreated());
+        new StartUI(new ValidateInput(new ConsoleInput()), new Tracker()).init();
     }
 }
