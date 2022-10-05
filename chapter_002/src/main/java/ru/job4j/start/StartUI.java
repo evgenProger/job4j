@@ -73,6 +73,10 @@ public class StartUI {
     public static void main(String[] args) {
         Item item = new Item("name", "desc");
         System.out.println(item);
-        new StartUI(new ValidateInput(new ConsoleInput()), new Tracker()).init();
+        new StartUI(
+                new ValidateInput(
+                        new ConsoleInput()
+                ), new Tracker()
+        ).init();
     }
 }
