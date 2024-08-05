@@ -17,7 +17,12 @@ public class Factorial {
         for (int num = 1; num <= n; num++) {
             result =  num * result;
             }
-     return n != 0 ? result : 1;
+     return result;
+    }
+
+    public  int factorial(int n) {
+
+        return  0;
     }
 
 }

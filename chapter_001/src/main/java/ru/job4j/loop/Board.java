@@ -1,5 +1,7 @@
 package ru.job4j.loop;
 
+import java.math.BigDecimal;
+
 public class Board {
     public String paint(int width, int weight) {
         StringBuilder screen = new StringBuilder();
@@ -16,4 +18,11 @@ public class Board {
         }
         return screen.toString();
     }
+
+    public static void main(String[] args) {
+        BigDecimal b = new BigDecimal(8587.6);
+        System.out.println(b.multiply(BigDecimal.valueOf(6)));
+
+    }
 }
+
